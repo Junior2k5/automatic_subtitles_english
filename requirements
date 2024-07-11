@@ -1,3 +1,11 @@
 ffmpeg-python
 openai-whisper
 srt
+SpeechRecognition
+moviepy
+pydub
+moviepy
+openai
+youtube-dl
+youtube-transcript-api
+numpy==1.26.4
