@@ -8,4 +8,9 @@ moviepy
 openai
 youtube-dl
 youtube-transcript-api
+transformers
+torch
+pysrt
+sentencepiece
+sacremoses
 numpy==1.26.4

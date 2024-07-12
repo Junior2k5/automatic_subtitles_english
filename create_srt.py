@@ -38,10 +38,11 @@ def load_whisper_model_local(model_path):
     return model
 
 def main():
-    video_path = r"PATH_FOR_YOUR_VIDEO.mp4"  # Replace with your local video file path
+    file_name = "NAME_OF_FILE"
+    video_path = fr"mp4/{file_name}.mp4"  # Replace with your local video file path
     audio_path = "extracted_audio.wav"
-    srt_path = "transcription.srt"
-    model_path = r"PATH_TO_YOUR_MODEL"  # Directory where model is stored
+    srt_path = fr"mp4/{file_name}.srt"
+    model_path = r"models"  # Directory where model is stored
 
     # Step 1: Extract audio from video
     extract_audio_from_video(video_path, audio_path)
