@@ -3,10 +3,10 @@ import pysrt
 from transformers import MarianMTModel, MarianTokenizer
 
 
-def translate_text(text, model, tokenizer, src_lang="en", tgt_lang="en"):
+def translate_text(text, model, tokenizer, src_lang="ru", tgt_lang="en"):
     # Preprocess the text
     text = f">>{tgt_lang}<< {text}"
-    inputs = tokenizer.encode(text, return_tensors="en", max_length=512, truncation=True)
+    inputs = tokenizer.encode(text, return_tensors="pt", max_length=512, truncation=True)
 
     # Perform translation and decode the output
     translated_tokens = model.generate(inputs, max_length=512)
@@ -29,7 +29,7 @@ def translate_subtitle_file(file_path, dest_folder, model, tokenizer, src_lang="
     print(f"Translated subtitles saved to {translated_file_path}")
 
 
-def translate_all_subtitles_in_folder(folder_path, dest_folder, model, tokenizer, src_lang="en", tgt_lang="pt"):
+def translate_all_subtitles_in_folder(folder_path, dest_folder, model, tokenizer, src_lang="ru", tgt_lang="en"):
     for root, _, files in os.walk(folder_path):
         for file in files:
             if file.endswith('.srt'):
@@ -43,10 +43,10 @@ if __name__ == "__main__":
     from transformers import MarianMTModel, MarianTokenizer
 
     # Load model and tokenizer from a local path
-    local_model_path = './local_model/opus-mt-ru-en' #download it from https://huggingface.co/Helsinki-NLP/opus-mt-tc-big-en-pt
+    local_model_path = './local_model/opus-mt-ru-en' #download it from https://huggingface.co/Helsinki-NLP/opus-mt-ru-en
     model = MarianMTModel.from_pretrained(local_model_path)
     tokenizer = MarianTokenizer.from_pretrained(local_model_path)
 
     folder_path = './mp4'
     dest_folder = './translated_srts'
-    translate_all_subtitles_in_folder(folder_path, dest_folder, model, tokenizer, src_lang="en", tgt_lang="pt")
+    translate_all_subtitles_in_folder(folder_path, dest_folder, model, tokenizer, src_lang="ru", tgt_lang="en")
