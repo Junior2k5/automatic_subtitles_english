@@ -4,13 +4,17 @@ srt
 SpeechRecognition
 moviepy
 pydub
+librosa
 moviepy
 openai
 youtube-dl
 youtube-transcript-api
 transformers
 torch
+torchaudio
 pysrt
 sentencepiece
 sacremoses
 numpy==1.26.4
+jiwer
+tnkeeh
