@@ -42,7 +42,7 @@ def main():
     video_path = fr"mp4/{file_name}.mp4"  # Replace with your local video file path
     audio_path = "extracted_audio.wav"
     srt_path = fr"mp4/{file_name}.srt"
-    model_path = r"models"  # Directory where model is stored
+    model_path = r"models/whisper-english"  # Directory where model is stored
 
     # Step 1: Extract audio from video
     extract_audio_from_video(video_path, audio_path)
