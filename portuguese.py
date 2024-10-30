@@ -48,7 +48,7 @@ def main():
     video_path = fr"mp4/{file_name}.mp4"  # Caminho para o arquivo de vídeo
     audio_path = "extracted_audio.wav"
     srt_path = fr"mp4/{file_name}.srt"
-    model_path = r"models/whisper-large-v2"  # Diretório onde o modelo "large" está armazenado
+    model_path = r"models/whisper-small"  # Diretório onde o modelo "large" está armazenado
 
     # Step 1: Extract audio from video
     extract_audio_from_video(video_path, audio_path)
