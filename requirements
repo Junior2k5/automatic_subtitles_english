@@ -11,6 +11,7 @@ sacremoses==0.1.1
 sentencepiece==0.2.0
 SpeechRecognition==3.14.1
 srt==3.5.3
+srt_equalizer==0.1.10
 tnkeeh==0.0.9
 tokenizers==0.21.0
 torch==2.1.0+cu121
@@ -31,3 +32,12 @@ youtube-transcript-api==0.6.3
 
 #No Powershell (como admin):
 #winget install Microsoft.VisualStudio.2022.BuildTools --force --override "--wait --passive --add Microsoft.VisualStudio.Component.VC.Tools.x86.x64 --add Microsoft.VisualStudio.Component.Windows11SDK.22621"
+
+
+#      Successfully uninstalled numpy-1.22.0
+#ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+#tts 0.22.0 requires numpy==1.22.0; python_version <= "3.10", but you have numpy 2.2.4 which is incompatible.
+#gruut 2.2.3 requires numpy<2.0.0,>=1.19.0, but you have numpy 2.2.4 which is incompatible.
+#numba 0.60.0 requires numpy<2.1,>=1.22, but you have numpy 2.2.4 which is incompatible.
+#scipy 1.11.4 requires numpy<1.28.0,>=1.21.6, but you have numpy 2.2.4 which is incompatible.
+#Successfully installed numpy-2.2.4
